@@ -1,14 +1,3 @@
-let viewZi = document.getElementById('zidaneopen');
-let hideZi = document.getElementById('hidezidane');
-
-
-hideZi.hidden = true;
-
-viewZi.onclick = function() {
-  viewZi.hidden = true;
-  hideZi.hidden = false;
-}
-
 const ffixFactory = (name, age, quote) => {
   return {
     name: name,
@@ -35,9 +24,16 @@ const cEiko = ffixFactory('Eiko Carol', 6, 'I don\'t wanna be alone anymore...')
 
 const tKuja = ffixFactory('Kuja', 24, 'The weak lose their freedom to the strong. Such is the way of the strong. And it is the providence of nature that only the strong survive. That is why I needed strength.');
 
-$('#zidaneopen').on('click',function(){
+const charLookup = {
+  Zidane:tZidane,
+  Garnet:aGarnet,
+}
+
+$('#games button').on('click',function(e){
+  var characterClicked = $(e.target).attr('Character');
+  var lookup = charLookup[characterClicked];
   $('#quoteBox').removeClass('hidden');
-  $('#charName').html(tZidane.name);
-  $('#charAge').html(tZidane.age);
-  $('#charQuote').html(tZidane.quote);
+  $('#charName').html(lookup.name);
+  $('#charAge').html(lookup.age);
+  $('#charQuote').html(lookup.quote);
 })
