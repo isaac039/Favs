@@ -153,7 +153,7 @@ img {
 }
 
   /* List */
-boxStyle{
+.box-style{
   border: 2px solid black;
   height: 200px;
   width: 50%;
