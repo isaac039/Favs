@@ -13,12 +13,12 @@ const ffixFactory = (name, age, quote) => {
   return {
     name: name,
     age: age,
-    quote: quote;
+    quote: quote
   }
 };
 
 const tZidane = ffixFactory('Zidane Tribal', 16, 'You don\'t need a reason to help people.');
-}
+
 const aGarnet = ffixFactory('Garnet Til Alexandros XVII', 16, 'Someday I will be queen, but I will always be myself.');
 
 const oVivi = ffixFactory('Vivi Ornitier', 9, 'How do you prove that you exist...? Maybe we don\'t exist...');
