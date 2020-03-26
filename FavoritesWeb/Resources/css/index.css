@@ -7,7 +7,9 @@ html {
     min-height: 500px;
     max-height: 1000px;
 }
-
+.hidden{
+  display:none;
+}
 a {
     color: green;
 }
@@ -151,7 +153,12 @@ img {
 }
 
   /* List */
-
+boxStyle{
+  border: 2px solid black;
+  height: 200px;
+  width: 50%;
+  margin: auto;
+}
 ol {
   text-align: center;
   list-style-position: inside;
